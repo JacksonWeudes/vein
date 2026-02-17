@@ -74,3 +74,18 @@
     margin-top: 1rem;
 }
 
+.origin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    border: 1px solid red;
+}
+.origin h2{
+    font-size: 23vw;
+}
+.origin p{
+    margin-block: .5rem;
+    width: 60%;
+}
