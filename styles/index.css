@@ -3,10 +3,11 @@
 .header{
     position: fixed;
     width: 100%;
+    padding-inline: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
+    z-index: 999;
 }
 
 .mobile-icon{
@@ -16,7 +17,6 @@
     gap: 10px;
     width: 40px;
     height: 30px;
-    border: 1px solid;
 }
 .mobile-icon span{
     width: 100%;
@@ -70,7 +70,7 @@
 .hero .text button{
     border: 1px solid red;
     font-size: 1.1rem;
-    padding: 10px 20px;
+    padding: 15px 30px;
     margin-top: 1rem;
 }
 
@@ -79,7 +79,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100dvh;
+    height: 130dvh;
     border: 1px solid red;
 }
 .origin h2{
@@ -88,4 +88,19 @@
 .origin p{
     margin-block: .5rem;
     width: 60%;
+}
+
+.features{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 160dvh;
+}
+.features .slice h2{
+    font-size: 15vw;
+}
+.features .slice p{
+    width: 50%;
+    margin: 1rem 3rem;
 }
