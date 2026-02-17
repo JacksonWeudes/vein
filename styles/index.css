@@ -47,15 +47,14 @@
 }
 .hero h1 span{
     position: absolute;
+    font-size: 22.5vw;
 }
 .hero h1 span:nth-child(1){
-    font-size: 22.5vw;
-    top: 50px;
+    top: 8vw;
     left: 0;
 }
 .hero h1 span:nth-child(2){
-    font-size: 22.5vw;
-    top: 140px;
+    top: 25vw;
     left: 100px;
 }
 .hero .text{
@@ -103,4 +102,37 @@
 .features .slice p{
     width: 50%;
     margin: 1rem 3rem;
+}
+
+@media screen and (min-width: 1200px){
+    p{
+        font-size: 1.1rem;
+    }
+
+    .mobile-icon{
+        display: none;
+    }
+    .desk-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero h1 span{
+        font-size: 16vw;
+    }
+    .hero h1 span:nth-child(1){
+        top: 0;
+    }
+    .hero h1 span:nth-child(2){
+        top: 12vw;
+        left: 25.5vw;
+    }
+    .hero .text{
+        bottom: 10vw;
+    }
+    .hero .text p{
+        width: 300px;
+    }
 }
