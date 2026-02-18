@@ -7,11 +7,16 @@
     font-family: 'grotesk';
     src: url(../fonts/AktivGrotesk-Black.otf);
 }
+@font-face {
+    font-family: 'edward';
+    src: url(../fonts/edwardianscriptitc.ttf);
+}
 
 :root{
     --title-font: 'grotesk';
     --text-font: "IBM Plex Mono", monospace;
     --button-font: "Space Mono", monospace;
+    --typo-font: 'edward'
 }
 
 *{

@@ -94,13 +94,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 160dvh;
+    height: 200dvh;
 }
 .features .slice h2{
     font-size: 15vw;
+
+}
+.features .slice:nth-child(1) h2{
+    font-family: var(--typo-font);
+    font-size: 20vw;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.features .slice:nth-child(2) h2{
+    background-image: url(../imgs/grid.jpg);
+    background-size: cover;
+}
+.features .slice:nth-child(3) h2{
+    background-color: #000;
+    color: #fff;
 }
 .features .slice p{
-    width: 50%;
+    width: 80%;
     margin: 1rem 3rem;
 }
 
@@ -120,19 +135,61 @@
     }
 
     .hero h1 span{
-        font-size: 16vw;
+        font-size: 20vw;
     }
     .hero h1 span:nth-child(1){
         top: 0;
     }
     .hero h1 span:nth-child(2){
-        top: 12vw;
+        top: 15vw;
         left: 25.5vw;
     }
     .hero .text{
-        bottom: 10vw;
+        bottom: 7vw;
     }
     .hero .text p{
         width: 300px;
+    }
+
+    .origin{
+        position: relative;
+    }
+    .origin p{
+        position: absolute;
+        width: 30%;
+        margin: 0;
+    }
+    .origin p:nth-child(1){
+        top: 9rem;
+        left: 5rem;
+    }
+    .origin p:nth-last-child(1){
+        bottom: 7rem;
+        right: 5rem;
+    }
+
+    .features{
+        height: 250dvh;
+        border: 1px solid blue;
+    }
+    .features .slice{
+        display: flex;
+        flex-direction: column;
+    }
+    .features .slice h2{
+        padding-inline: 5rem;
+        font-size: 11vw;
+    }
+    .features .slice:nth-child(odd) h2{
+        align-self: flex-end;
+    }
+    .features .slice:nth-child(2) h2{
+        width: 100%;
+    }
+    .features .slice p{
+        width: 50%;
+    }
+    .features .slice:nth-child(even) p{
+        align-self: flex-end;   
     }
 }
