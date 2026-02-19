@@ -8,6 +8,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 999;
+    border-bottom: 2px solid;
 }
 
 .mobile-icon{
@@ -22,6 +23,13 @@
     width: 100%;
     height: 2px;
     background-color: #000;
+    transition: .2s ease-in-out;
+}
+.mobile-icon.active span:nth-child(1){
+    transform: translateY(2px) rotate(45deg);
+}
+.mobile-icon.active span:nth-child(2){
+    transform: translateY(-11px) rotate(-45deg);
 }
 
 .desk-nav{
@@ -30,11 +38,15 @@
 
 .side-nav{
     position: fixed;
-    top: 0;
+    top: 2.5rem;
     right: -70%;
     width: 60%;
     height: 100dvh;
     border: 1px solid;
+    transition: .2s ease-in-out;
+}
+.side-nav.active{
+    right: 0;
 }
 
 .hero{
@@ -56,6 +68,7 @@
 .hero h1 span:nth-child(2){
     top: 25vw;
     left: 100px;
+    border: 2px solid;
 }
 .hero .text{
     position: absolute;
@@ -67,7 +80,7 @@
     font-size: 1.1rem;
 }
 .hero .text button{
-    border: 1px solid red;
+    border: 2px solid;
     font-size: 1.1rem;
     padding: 15px 30px;
     margin-top: 1rem;
@@ -79,7 +92,10 @@
     justify-content: center;
     align-items: center;
     height: 130dvh;
-    border: 1px solid red;
+    background-image: url(../imgs/img2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid;
 }
 .origin h2{
     font-size: 23vw;
@@ -87,6 +103,7 @@
 .origin p{
     margin-block: .5rem;
     width: 60%;
+    padding: 1rem;
 }
 
 .features{
@@ -119,6 +136,11 @@
     margin: 1rem 3rem;
 }
 
+.footer{
+    padding: 3rem 1rem;
+    border-top: 2px solid #000;
+}
+
 @media screen and (min-width: 1200px){
     p{
         font-size: 1.1rem;
@@ -131,7 +153,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
+    }
+    .desk-nav a{
+        font-size: 1.3rem;
     }
 
     .hero h1 span{
@@ -158,9 +183,11 @@
         position: absolute;
         width: 30%;
         margin: 0;
+        padding: 1rem;
+        border: 2px solid;
     }
     .origin p:nth-child(1){
-        top: 9rem;
+        top: 7.5rem;
         left: 5rem;
     }
     .origin p:nth-last-child(1){
@@ -169,8 +196,7 @@
     }
 
     .features{
-        height: 250dvh;
-        border: 1px solid blue;
+        height: 270dvh;
     }
     .features .slice{
         display: flex;
@@ -188,6 +214,8 @@
     }
     .features .slice p{
         width: 50%;
+        padding: 1rem;
+        border: 2px solid;
     }
     .features .slice:nth-child(even) p{
         align-self: flex-end;   
