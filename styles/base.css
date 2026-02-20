@@ -16,7 +16,10 @@
     --title-font: 'grotesk';
     --text-font: "IBM Plex Mono", monospace;
     --button-font: "Space Mono", monospace;
-    --typo-font: 'edward'
+    --typo-font: 'edward';
+    --color1: hsl(180, 14%, 3%); 
+    --color2: hsl(145, 12%, 63%);
+    --color3: hsl(0, 64%, 42%);
 }
 
 *{
@@ -36,6 +39,9 @@ h1, h2, h3{
 
 p{
     font-family: var(--text-font);
+    font-size: .9rem;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 a{
