@@ -21,7 +21,7 @@
 .mobile-icon span{
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background-color: var(--color3);
     transition: .2s ease-in-out;
 }
 .mobile-icon.active span:nth-child(1){
@@ -36,16 +36,35 @@
 }
 
 .side-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
     position: fixed;
-    top: 2.5rem;
+    top: 20%;
     right: -70%;
     width: 60%;
-    height: 100dvh;
-    border: 1px solid;
+    height: 60dvh;
+
+    border: 2px solid;
+    background-color: #fff;
+    z-index: 99;
     transition: .2s ease-in-out;
 }
 .side-nav.active{
     right: 0;
+}
+.side-nav a{
+    display: block;
+    font-size: 2rem;
+}
+.side-nav a:nth-child(2){
+    font-weight: 600;
+}
+.side-nav a:nth-child(3){
+    font-family: var(--title-font);
 }
 
 .hero{
@@ -78,10 +97,12 @@
     width: 60%;
 }
 .hero .text button{
-    border: 2px solid;
     font-size: 1.1rem;
+    font-weight: 900;
     padding: 15px 30px;
     margin-top: 1rem;
+    background-color: var(--color3);
+    color: #fff;
 }
 
 .origin{
@@ -98,6 +119,9 @@
     margin-block: .5rem;
     width: 60%;
     padding: 1rem;
+}
+.origin img{
+    display: none;
 }
 
 .features{
@@ -118,21 +142,30 @@
     text-transform: capitalize;
 }
 .features .slice:nth-child(2) h2{
+    border-block: 2px solid var(--color3);
     background-image: url(../imgs/grid.jpg);
-    background-size: cover;
+    background-size: contain;
 }
 .features .slice:nth-child(3) h2{
-    background-color: #000;
+    background-color: var(--color3);
     color: #fff;
 }
 .features .slice p{
     width: 80%;
     margin: 1rem 3rem;
 }
+.features img{
+    width: 100%;
+    height: 30%;
+}
 
 .footer{
     padding: 3rem 1rem;
-    border-top: 2px solid #000;
+    background-color: var(--color3);
+    color: #fff;
+}
+.footer a{
+    color: #fff;
 }
 
 @media screen and (min-width: 1200px){
@@ -182,6 +215,7 @@
         border: 2px solid;
     }
     .origin img{
+        display: block;
         position: absolute;
         right: 0;
         bottom: 0;
@@ -201,12 +235,14 @@
     .origin p:nth-last-child(1){
         bottom: 7rem;
         right: 5rem;
+        background-color: #fff;
     }
     .origin h2{
         z-index: 9;
     }
 
     .features{
+        position: relative;
         height: 300dvh;
     }
     .features .slice{
@@ -226,8 +262,18 @@
     .features .slice p{
         width: 50%;
         padding: 1rem;
+        border: 2px solid;
+        background-color: #fff;
     }
     .features .slice:nth-child(even) p{
         align-self: flex-end;   
+    }
+    .features img{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 70%;
+        height: 50%;
+        z-index: -1;
     }
 }
